@@ -4,7 +4,7 @@ const api = axios.create({
   baseURL: "http://localhost:3001/",
 });
 
-export const sendMail = async (data) => {
-  const { data } = await api.post("/mail", data);
+export const sendMail = async (dataList) => {
+  const { data } = await api.post("/mail", dataList);
   return data;
 };
