@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import InputList from "./InputList";
 import { sendMail } from "../api/api";
-import Succes from "../assets/Succes";
+import Success from "../assets/Success";
 
 function Form() {
   const {
@@ -42,7 +42,7 @@ function Form() {
         <form className="mt-6" onSubmit={handleSubmit(onSubmit)}>
           {show === true ? (
             <div className="flex justify-center">
-              <Succes />
+              <Success />
             </div>
           ) : (
             <>

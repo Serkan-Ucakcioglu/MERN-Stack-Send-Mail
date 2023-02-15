@@ -1,6 +1,6 @@
 import React from "react";
 
-function Succes() {
+function Success() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -31,4 +31,4 @@ function Succes() {
   );
 }
 
-export default Succes;
+export default Success;
