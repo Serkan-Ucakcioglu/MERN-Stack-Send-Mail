@@ -5,9 +5,8 @@ const sendMail = async (req, res) => {
     const { email, subject, body } = req.body;
 
     let transporter = nodemailer.createTransport({
+      service: "gmail",
       host: "smtp.gmail.com",
-      port: 587,
-      secure: false,
       auth: {
         user: process.env.USER,
         pass: process.env.PASSWORD,
@@ -21,6 +20,7 @@ const sendMail = async (req, res) => {
       text: "Hello world?",
       html: body,
     });
+    res.status(200).json("send mail success");
   } catch (error) {
     res.status(404).json(error);
   }
