@@ -11,7 +11,9 @@ function Form() {
     reset,
     formState: { errors },
   } = useForm();
+
   const [show, setShow] = useState(null);
+
   const onSubmit = async (dataList) => {
     const data = await sendMail(dataList);
     if (data) {
