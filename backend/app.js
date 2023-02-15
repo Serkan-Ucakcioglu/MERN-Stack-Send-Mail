@@ -3,6 +3,7 @@ const app = express();
 require("dotenv").config();
 const port = process.env.PORT || 3002;
 const cors = require("cors");
+const mailRoute = require("./router/mailRoute");
 
 app.use(
   cors({
@@ -11,9 +12,7 @@ app.use(
   })
 );
 
-app.get("/", (req, res) => {
-  res.send("hello from simple server :)");
-});
+app.use("/", mailRoute);
 
 app.listen(port, () =>
   console.log("> Server is up and running on port : " + port)
