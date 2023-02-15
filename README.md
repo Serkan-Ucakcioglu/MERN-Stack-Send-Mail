@@ -14,6 +14,8 @@ To run it, you need to create an application password in your own gmail and link
 
 ### Mail
 <img width="490" alt="image" src="https://user-images.githubusercontent.com/98692987/219020136-1d825264-3ddc-429d-b0e1-8400f168cea4.png">
+
+### Success
 <img width="974" alt="image" src="https://user-images.githubusercontent.com/98692987/219019785-5faecc47-048a-47df-b56e-826caf8f295b.png">
 
 ### Error
