@@ -8,12 +8,12 @@ const sendMail = async (req, res) => {
       service: "gmail",
       host: "smtp.gmail.com",
       auth: {
-        user: process.env.USER,
+        user: process.env.EMAIL,
         pass: process.env.PASSWORD,
       },
     });
 
-    let info = await transporter.sendMail({
+    await transporter.sendMail({
       from: "serkanuckc06@gmail.com",
       to: email,
       subject,
