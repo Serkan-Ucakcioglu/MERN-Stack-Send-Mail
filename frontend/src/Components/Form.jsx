@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import InputList from "./InputList";
 import { sendMail } from "../api/api";
+import Succes from "../assets/Succes";
 
 function Form() {
   const {
@@ -13,11 +14,12 @@ function Form() {
   const [show, setShow] = useState(null);
   const onSubmit = async (dataList) => {
     const data = await sendMail(dataList);
-
     if (data) {
-      alert("succcess");
       setShow(true);
-      reset();
+      setTimeout(() => {
+        reset();
+        setShow(null);
+      }, 1000);
     } else {
       setShow(false);
     }
@@ -36,12 +38,20 @@ function Form() {
         )}
 
         <form className="mt-6" onSubmit={handleSubmit(onSubmit)}>
-          <InputList register={register} errors={errors} />
-          <div className="mt-6">
-            <button className="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-purple-700 rounded-md hover:bg-purple-600 focus:outline-none focus:bg-purple-600">
-              Send Mail
-            </button>
-          </div>
+          {show === true ? (
+            <div className="flex justify-center">
+              <Succes />
+            </div>
+          ) : (
+            <>
+              <InputList register={register} errors={errors} />
+              <div className="mt-6">
+                <button className="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-purple-700 rounded-md hover:bg-purple-600 focus:outline-none focus:bg-purple-600">
+                  Send Mail
+                </button>
+              </div>
+            </>
+          )}
         </form>
       </div>
     </div>
