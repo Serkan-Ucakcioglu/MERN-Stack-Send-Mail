@@ -1,16 +1,22 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import InputList from "./InputList";
+import { sendMail } from "../api/api";
 
 function Form() {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data) => {
-    data;
+  const onSubmit = async (dataList) => {
+    const { data } = await sendMail(dataList);
+    if (data) {
+      alert("succcess");
+      reset();
+    }
   };
 
   return (
