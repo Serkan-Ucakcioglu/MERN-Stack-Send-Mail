@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import InputList from "./InputList";
 import { sendMail } from "../api/api";
@@ -10,12 +10,16 @@ function Form() {
     reset,
     formState: { errors },
   } = useForm();
-
+  const [show, setShow] = useState(null);
   const onSubmit = async (dataList) => {
-    const { data } = await sendMail(dataList);
+    const data = await sendMail(dataList);
+
     if (data) {
       alert("succcess");
+      setShow(true);
       reset();
+    } else {
+      setShow(false);
     }
   };
 
@@ -25,10 +29,14 @@ function Form() {
         <h1 className="text-3xl font-semibold text-center text-purple-700">
           Send Mail
         </h1>
+        {show === false && (
+          <h2 className="text-3xl mt-2 text-red-500 font-semibold text-center">
+            Mail could not be sent
+          </h2>
+        )}
 
         <form className="mt-6" onSubmit={handleSubmit(onSubmit)}>
           <InputList register={register} errors={errors} />
-
           <div className="mt-6">
             <button className="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-purple-700 rounded-md hover:bg-purple-600 focus:outline-none focus:bg-purple-600">
               Send Mail
