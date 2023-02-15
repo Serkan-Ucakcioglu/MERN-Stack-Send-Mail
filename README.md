@@ -1,5 +1,8 @@
 # Mern-Stack-Send-Mail
 
+### About
+To run it, you need to create an application password in your own gmail and link it to the env output.
+
 ### Form
 <img width="699" alt="image" src="https://user-images.githubusercontent.com/98692987/219019652-898c6815-48fe-4cd3-9976-fb590ef205ec.png">
 
