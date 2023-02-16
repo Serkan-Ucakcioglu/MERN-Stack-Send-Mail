@@ -12,6 +12,7 @@ const sendMail = async (req, res) => {
       },
     });
 
+    //sendmail
     await transporter.sendMail({
       from: "serkanuckc06@gmail.com", // you email
       to: email, // to email

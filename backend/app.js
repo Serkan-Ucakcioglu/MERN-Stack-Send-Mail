@@ -15,6 +15,4 @@ app.use(express.json());
 
 app.use("/", mailRoute);
 
-app.listen(port, () =>
-  console.log("> Server is up and running on port : " + port)
-);
+app.listen(port, () => console.log("Server running" + port));
