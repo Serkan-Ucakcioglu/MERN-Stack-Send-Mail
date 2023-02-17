@@ -6,7 +6,7 @@ To run it, you need to create an application password in your own gmail and link
 ### Form
 <img width="699" alt="image" src="https://user-images.githubusercontent.com/98692987/219019652-898c6815-48fe-4cd3-9976-fb590ef205ec.png">
 
-### Form-Error
+### Form Error
 <img width="904" alt="image" src="https://user-images.githubusercontent.com/98692987/219019671-a4892030-8f83-4466-963e-f92f6cebed9d.png">
 
 ### Form 
