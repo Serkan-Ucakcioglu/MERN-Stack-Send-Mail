@@ -9,7 +9,7 @@ To run it, you need to create an application password in your own gmail and link
 ### Form Error
 <img width="904" alt="image" src="https://user-images.githubusercontent.com/98692987/219019671-a4892030-8f83-4466-963e-f92f6cebed9d.png">
 
-### Form 
+### Mail
 <img width="830" alt="image" src="https://user-images.githubusercontent.com/98692987/219019756-bd3fad26-b270-42b9-a790-02f39b2dfb9e.png">
 
 ### Mail
