@@ -2,7 +2,7 @@
 
 ### About
 
-I wrote it in React Javascript at first, then I translated it in React TypeScript.
+I wrote it in React Javascript at first, then I translated it in React TypeScript.<br>
 To run it, you need to create an application password in your own gmail and link it to the env output.
 
 ### Form
