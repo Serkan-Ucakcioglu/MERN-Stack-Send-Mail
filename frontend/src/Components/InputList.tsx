@@ -1,6 +1,13 @@
 import React from "react";
+import { FieldErrors, UseFormRegister } from "react-hook-form";
+import { IDATA } from "./Form";
 
-function InputList({ register, errors }) {
+type IFORM = {
+  register: UseFormRegister<IDATA>;
+  errors: FieldErrors<IDATA>;
+};
+
+function InputList({ register, errors }: IFORM) {
   return (
     <>
       <div className="mb-2">
@@ -55,7 +62,6 @@ function InputList({ register, errors }) {
           Body
         </label>
         <textarea
-          type="text"
           {...register("body", {
             required: "required!",
             minLength: {
