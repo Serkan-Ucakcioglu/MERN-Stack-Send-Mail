@@ -1,9 +1,11 @@
+import React from "react";
+
 function InputList({ register, errors }) {
   return (
     <>
       <div className="mb-2">
         <label
-          for="email"
+          htmlFor="email"
           className="block text-sm text-left font-semibold text-gray-800"
         >
           Email
@@ -21,7 +23,7 @@ function InputList({ register, errors }) {
       </div>
       <div className="mb-4">
         <label
-          for="subject"
+          htmlFor="subject"
           className="block text-left text-sm font-semibold text-gray-800"
         >
           Subject
@@ -47,7 +49,7 @@ function InputList({ register, errors }) {
       </div>
       <div className="mb-4">
         <label
-          for="body"
+          htmlFor="body"
           className="block text-left text-sm font-semibold text-gray-800"
         >
           Body

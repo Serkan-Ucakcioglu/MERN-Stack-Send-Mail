@@ -4,17 +4,23 @@ import InputList from "./InputList";
 import { sendMail } from "../api/api";
 import Success from "../assets/Success";
 
+export interface IDATA {
+  email: String;
+  subject: String;
+  body: String;
+}
+
 function Form() {
   const {
     register,
     handleSubmit,
     reset,
     formState: { errors },
-  } = useForm();
+  } = useForm<IDATA>();
 
-  const [show, setShow] = useState(null);
+  const [show, setShow] = useState<boolean | null>(null);
 
-  const onSubmit = async (dataList) => {
+  const onSubmit = async (dataList: IDATA) => {
     const data = await sendMail(dataList);
     if (data) {
       setShow(true);
